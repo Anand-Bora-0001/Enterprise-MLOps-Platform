@@ -1,0 +1,19 @@
+from sqlalchemy import Column, Integer, String, Boolean, Enum
+import enum
+from .base import Base
+
+class RoleEnum(str, enum.Enum):
+    ADMIN = "admin"
+    DATA_SCIENTIST = "data_scientist"
+    ML_ENGINEER = "ml_engineer"
+    VIEWER = "viewer"
+
+class User(Base):
+    __tablename__ = "users"
+
+    id = Column(Integer, primary_key=True, index=True)
+    email = Column(String, unique=True, index=True, nullable=False)
+    hashed_password = Column(String, nullable=False)
+    full_name = Column(String, index=True)
+    is_active = Column(Boolean, default=True)
+    role = Column(Enum(RoleEnum), default=RoleEnum.VIEWER)

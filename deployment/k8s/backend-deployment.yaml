@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mlops-backend
+  labels:
+    app: mlops-backend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: mlops-backend
+  template:
+    metadata:
+      labels:
+        app: mlops-backend
+    spec:
+      containers:
+      - name: mlops-backend
+        image: mlops-backend:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8000
+        envFrom:
+        - secretRef:
+            name: mlops-secrets
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mlops-backend
+spec:
+  selector:
+    app: mlops-backend
+  ports:
+  - port: 8000
+    targetPort: 8000

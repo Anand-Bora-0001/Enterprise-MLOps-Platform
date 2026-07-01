@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mlops-worker
+  labels:
+    app: mlops-worker
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: mlops-worker
+  template:
+    metadata:
+      labels:
+        app: mlops-worker
+    spec:
+      containers:
+      - name: mlops-worker
+        image: mlops-worker:latest
+        imagePullPolicy: IfNotPresent
+        envFrom:
+        - secretRef:
+            name: mlops-secrets
