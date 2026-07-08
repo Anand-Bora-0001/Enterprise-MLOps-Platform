@@ -106,6 +106,17 @@ graph TD
 
 ---
 
+## 🖼️ Platform Screenshots
+
+<div align="center">
+  <img src="docs/dashboard.png" alt="Dashboard" width="48%" style="border-radius: 8px; margin: 1%;"/>
+  <img src="docs/datasets.png" alt="Datasets" width="48%" style="border-radius: 8px; margin: 1%;"/>
+  <img src="docs/experiments.png" alt="Experiments" width="48%" style="border-radius: 8px; margin: 1%;"/>
+  <img src="docs/registry.png" alt="Model Registry" width="48%" style="border-radius: 8px; margin: 1%;"/>
+</div>
+
+---
+
 ## 🛠️ Technology Stack
 
 | Layer | Technologies Used |
