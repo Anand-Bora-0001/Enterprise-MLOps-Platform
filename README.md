@@ -1,8 +1,21 @@
+<div align="center">
+  
 # 🚀 Enterprise MLOps Platform
+
+[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.95+-009688.svg)](https://fastapi.tiangolo.com)
+[![React](https://img.shields.io/badge/React-18+-61DAFB.svg)](https://reactjs.org/)
+[![MLflow](https://img.shields.io/badge/MLflow-2.0+-0194E2.svg)](https://mlflow.org/)
+[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED.svg)](https://www.docker.com/)
 
 An open-source, production-ready, full-stack Machine Learning Operations platform designed for enterprise scale. This monorepo bridges the gap between experimentation and production, offering a complete end-to-end lifecycle for machine learning models.
 
+<img src="docs/portal.png" alt="Enterprise MLOps Portal Dashboard" width="100%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-top: 20px; margin-bottom: 20px;"/>
+
+</div>
+
 ---
+
 
 ## 🏗️ Architecture Diagram
 
