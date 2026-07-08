@@ -20,6 +20,15 @@ def read_users(
     users = db.query(models.User).offset(skip).limit(limit).all()
     return users
 
+@router.get("/me", response_model=schemas.User)
+def read_user_me(
+    current_user: models.User = Depends(deps.get_current_active_user),
+) -> Any:
+    """
+    Get current user.
+    """
+    return current_user
+
 @router.get("/{user_id}", response_model=schemas.User)
 def read_user_by_id(
     user_id: int,
