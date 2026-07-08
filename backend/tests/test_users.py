@@ -19,7 +19,7 @@ def test_login(client: TestClient):
     
     # Then login
     response = client.post(
-        "/api/v1/auth/login",
+        "/api/v1/auth/login/access-token",
         data={"username": "login@example.com", "password": "password123"}
     )
     assert response.status_code == 200
@@ -34,7 +34,7 @@ def test_read_users_me(client: TestClient):
         json={"email": "me@example.com", "password": "password123", "full_name": "Me User"}
     )
     login_response = client.post(
-        "/api/v1/auth/login",
+        "/api/v1/auth/login/access-token",
         data={"username": "me@example.com", "password": "password123"}
     )
     token = login_response.json()["access_token"]

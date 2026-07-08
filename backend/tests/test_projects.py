@@ -6,7 +6,7 @@ def get_auth_token(client: TestClient) -> str:
         json={"email": "proj@example.com", "password": "password", "full_name": "Proj User"}
     )
     response = client.post(
-        "/api/v1/auth/login",
+        "/api/v1/auth/login/access-token",
         data={"username": "proj@example.com", "password": "password"}
     )
     return response.json()["access_token"]

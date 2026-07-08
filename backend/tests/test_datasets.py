@@ -11,7 +11,7 @@ def get_auth_token(client: TestClient) -> str:
     except:
         pass
     response = client.post(
-        "/api/v1/auth/login",
+        "/api/v1/auth/login/access-token",
         data={"username": "dataset@example.com", "password": "password"}
     )
     return response.json()["access_token"]
