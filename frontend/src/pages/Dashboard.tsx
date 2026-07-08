@@ -1,4 +1,4 @@
-import React from "react"
+
 import { Activity, Database, Server, AlertTriangle } from "lucide-react"
 
 export default function Dashboard() {

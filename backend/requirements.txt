@@ -18,3 +18,4 @@ pytest
 httpx
 prometheus-fastapi-instrumentator
 shap
+email-validator

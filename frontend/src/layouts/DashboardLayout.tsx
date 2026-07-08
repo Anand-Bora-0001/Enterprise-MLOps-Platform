@@ -1,4 +1,4 @@
-import React from "react"
+
 import { Outlet, Link, useNavigate, useLocation } from "react-router-dom"
 import { LayoutDashboard, Database, Activity, LogOut, Settings, Box } from "lucide-react"
 import { cn } from "../lib/utils"

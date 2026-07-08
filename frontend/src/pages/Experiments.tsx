@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "../components/ui/button"
 import { Activity, Play, BarChart3, CheckCircle2, XCircle, Clock } from "lucide-react"
 import api from "../services/api"
@@ -22,7 +22,7 @@ export default function Experiments() {
     }
   }
 
-  const getStatusIcon = (status: str) => {
+  const getStatusIcon = (status: string) => {
     switch (status) {
       case "completed": return <CheckCircle2 className="h-4 w-4 text-emerald-400" />
       case "failed": return <XCircle className="h-4 w-4 text-red-400" />
@@ -31,7 +31,7 @@ export default function Experiments() {
     }
   }
 
-  const getStatusClass = (status: str) => {
+  const getStatusClass = (status: string) => {
     switch (status) {
       case "completed": return "text-emerald-400 bg-emerald-400/10"
       case "failed": return "text-red-400 bg-red-400/10"

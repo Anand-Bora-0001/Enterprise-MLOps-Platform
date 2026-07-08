@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "../components/ui/button"
-import { Server, Activity, ShieldCheck, Box } from "lucide-react"
+import { Server, ShieldCheck, Box } from "lucide-react"
 import api from "../services/api"
 
 export default function Registry() {
@@ -22,7 +22,7 @@ export default function Registry() {
     }
   }
 
-  const getStatusClass = (status: str) => {
+  const getStatusClass = (status: string) => {
     switch (status) {
       case "approved": return "text-emerald-400 bg-emerald-400/10"
       case "rejected": return "text-red-400 bg-red-400/10"
